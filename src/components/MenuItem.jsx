@@ -2,7 +2,7 @@ export default function MenuItem(props) {
 
 return(
 
-    <div className={`flex flex-row justify-between border-2 border-${props.color} p-4 m-1 ${props.color === "black" ? "hover:bg-gray-100" : "hover:bg-blue-100" }`}>
+    <div className={`flex flex-row justify-between border-2  p-4 m-1 ${props.color === "black" ? "border-black hover:bg-gray-100" : "border-blue-700 hover:bg-blue-100" }`}>
         {props.elementName}
         {props.showArrow &&
         <div className={`flex ${props.arrowDirection === "down"? "rotate-90" : "flex-row"}`}>
