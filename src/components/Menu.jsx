@@ -21,7 +21,7 @@ export default function Menu(props) {
     };
 
     return (
-        <div className="flex flex-col w-60">
+        <div className={`flex flex-col w-60 transition ease-in-out duration-200`}>
             <div onClick={toggleSubElements}>
                 <MenuItem
                     elementName={props.element}
@@ -30,13 +30,16 @@ export default function Menu(props) {
                     arrowDirection={showSubElements ? 'down' : ''}
                 />
             </div>
-            {showSubElements && (
-                <div className={`flex flex-col pl-4 transition-opacity duration-500 ease-in-out opacity-${showSubElements ? '100' : '0'}`}>
+            {showSubElements &&
+                <div className={` transition flex flex-col pl-4 ease-in-out duration-200 ${showSubElements ? ' opacity-100' : 'opacity-0'}`}>
                     {props.subElements.map((item, index) => (
                         <MenuItem key={index} elementName={item} color="blue-700" />
                     ))}
                 </div>
-            )}
+            }
+
+
+
         </div>
     );
 }

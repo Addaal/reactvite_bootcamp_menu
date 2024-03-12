@@ -12,7 +12,7 @@ function App() {
     return (
         <>
             {data.map((item, index) => (
-                <Menu
+                <Menu 
                     key={index}
                     element={item.element}
                     subElements={item.subElements}
